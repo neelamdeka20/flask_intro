@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Device Listing</title>
+</head>
+<body>
+    <h2>Devices with stock</h2>
+    {% for index in range(0, rows_count) %}
+        <div class="panel panel-heading">
+            <label><h3 class="panel-title">{{ rows[index]['device_name'] }}</h3> - with stock of {{ rows[index]['inventory'] }} </label>
+        </div>
+        <p class="panel-body">{{ rows[index]['device_description'] }}</p>
+    {% endfor %}
+</body>
+</html>
